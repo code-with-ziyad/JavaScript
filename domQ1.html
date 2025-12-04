@@ -1,0 +1,77 @@
+<!-----------------------------QUESTION NO#1--------------------------->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="name">My Name</h2>
+    <button id="btn">Change Name</button>
+    
+</body>
+<script>
+    document.getElementById("btn").addEventListener("click", ()=>{
+        document.getElementById("name").innerText = "Ziyad Aftab";
+    })
+</script>
+</html> -->
+
+
+<!-----------------------------QUESTION NO#2--------------------------->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+ .dark{
+    background: yellow;
+    
+ }
+ .text{
+     color: red;
+     font-size: 50px;
+ }
+</style>
+<body>
+    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos ducimus
+         fugiat magnam beatae molestiae fugit exercitationem illo doloremque, doloribus, eos
+          ipsum non ex, molestias quaerat ullam debitis natus nesciunt minima!</p>
+    <button id="change">Change BG</button>
+</body>
+<script>
+    document.getElementById("change").addEventListener("click", ()=>{
+        document.body.classList.toggle("dark")
+    })
+</script>
+</html> -->
+
+<!-----------------------------QUESTION NO#3--------------------------->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input id="text" type="text">
+    <button id="show">show Text</button>
+    <p id="type"></p>
+
+</body>
+<script>
+    document.getElementById("show").addEventListener("click", ()=>{
+       let value = document.getElementById("text").value;
+        document.getElementById("type").innerText = "You Typed " + value;
+    })
+</script>
+</html>
