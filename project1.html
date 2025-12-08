@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Todo App</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f4f4;
+            padding: 20px;
+        }
+        #main {
+            width: 300px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 5px gray;
+        }
+        li {
+            margin: 5px 0;
+            padding: 5px;
+            background: #eee;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+        }
+        button {
+            background: red;
+            color: white;
+            border: none;
+            padding: 3px 6px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .done {
+            text-decoration: line-through;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+<div id="main">
+    <h2>Todo List</h2>
+
+    <input type="text" id="taskInput" placeholder="Enter task">
+    <button onclick="addTask()">Add</button>
+
+    <ul id="taskList"></ul>
+</div>
+
+
+</body>
+<script>
+    // Array for storing Task
+    let tasks = [];
+
+    // function to add task
+    function addTask() {
+        let input = document.getElementById("taskInput").value;
+
+        if (input === "") {
+            alert("please enter a task!");
+            return;
+        }
+        tasks.push(input);
+            document.getElementById("taskInput").value = "";    
+            displayTasks();
+    }
+
+   function displayTasks() {
+      let list = document.getElementById("taskList");
+      list.innerHTML = "";
+
+     for (let i = 0; i < tasks.length; i++) {
+       
+       let li = document.createElement("li");
+       li.innerHTML = `
+          <span onclick="markDone(${i})">${tasks[i]}</span>
+          <button onclick="deleteTask(${i})">Delete</button>
+       `;
+
+       list.appendChild(li);
+        
+     }
+   }
+
+  function markDone(index) {
+    let item = document.getElementById("taskList").children[index];
+    item.classList.toggle("done");
+}
+
+
+   function deleteTask(index) {
+    tasks.splice(index, 1);
+    displayTasks();
+   }
+
+
+</script>
+</html>
