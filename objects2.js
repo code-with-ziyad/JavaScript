@@ -36,3 +36,22 @@ console.log(Object.entries(userOne)); // entries == both
 
 console.log(userOne.hasOwnProperty('name')); // check this key is exist in this object
 
+const course = {
+    courseName: "Java Script",
+    courseFee: 5000,
+    courseInstructer: "Hitesh"
+}
+
+// console.log(course.courseFee);
+
+let {courseInstructer: instructer} = course;
+console.log(instructer);
+
+
+///   API values json
+{
+    "name" : "Ziyad",
+    "id": "3235",
+    "link": "https/ziyadgitub.com"
+
+}
