@@ -176,4 +176,5 @@ console.log(newValue);
 
 // Array ko ek single value me convert karta hai
 // Total, sum, average, object banana me use hota hai
+
 // Accumulator use karta hai
