@@ -1,0 +1,32 @@
+
+<html>
+<head>
+  
+    <title>Modify CSS</title>
+</head>
+<style>
+    #main{
+        font-size: 50px;
+        text-align: center;
+        margin-top: 100px;
+        color: red;
+        transition: 2s;
+       
+    }
+</style>
+<body>
+    <div id="main" onmouseenter="modify()" onmouseleave="unModify()"> HellO Ziyad</div>
+</body>
+<script>
+    function modify() {
+        document.getElementById("main").style.color = "blue"
+        document.getElementById("main").style.fontFamily = "'Courier New', Courier, monospace"
+        document.getElementById("main").style.fontSize = "70px"
+    }
+    function unModify(){
+         document.getElementById("main").style.color = ""
+         document.getElementById("main").style.fontFamily = ""
+          document.getElementById("main").style.fontSize = ""
+    }
+</script>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="name" type="text" placeholder="Enter the user name">
+   <button id="show">Show</button>
+   <p id="result"></p>
+</body>
+<script>
+    document.getElementById("show").addEventListener("click", ()=>{
+        let value = document.getElementById("name").value;
+        document.getElementById("result").innerText = "You Typed: " +value
+    })
+</script>
+</html>

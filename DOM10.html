@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="email" id="email">
+ <button id="submit" >Submit</button>
+ <p id="error" style="color: red;"></p>
+    
+</body>
+<script>
+    document.getElementById("submit").addEventListener("click", () =>{
+        let email = document.getElementById("email").value;
+
+        if (email.trim() ===  "") {
+            document.getElementById("error").innerText ="Email cannot be empty";
+
+        }else{
+            document.getElementById("error").innerText = "";
+        }
+    })
+</script>
+</html>

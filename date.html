@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="submit">Submit</button>
+    <h1 id="time"></h1>
+    
+</body>
+<script>
+    document.getElementById("submit").addEventListener("click", ()=>{
+        let now = new Date();
+        document.getElementById("time").innerText = "form submited at " + now.toLocaleString();
+    })
+</script>
+</html>
